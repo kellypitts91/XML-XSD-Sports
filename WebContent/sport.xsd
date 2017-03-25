@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+
+<!-- 
+	Author: Kelly Pitts 09098321 
+	Sport Schema - First Vocabulary
+-->
+
+<!DOCTYPE xml>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:attributeGroup name="sportAttribute" > <!-- named attribute group -->
+		<xs:attribute name="id" type="xs:integer" use="required" />
+		<xs:attribute name="teamName" type="xs:string" use="required" />
+	</xs:attributeGroup>
+	<xs:element name="sports">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sport" minOccurs="1" maxOccurs="unbounded" >
+					<xs:complexType>
+						<xs:sequence> 
+							<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
+							<xs:element name="noOfPlayers" type="xs:integer" minOccurs="1" maxOccurs="1" />
+							
+							<xs:element name="international" minOccurs="1" maxOccurs="1"> 
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<!--<xs:pattern value="international|national"/>-->
+										<xs:enumeration value="international" />
+										<xs:enumeration value="national" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						
+							<xs:element name="type" minOccurs="1" maxOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="indoor|outdoor"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							
+							<xs:element name="location" type="lType" minOccurs="1" maxOccurs="1" />
+							
+							<xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1" />
+						</xs:sequence>
+						<xs:attributeGroup ref="sportAttribute" />
+						
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="lType"> <!-- named complex type -->
+		<xs:sequence>
+			<xs:element name="country" type="xs:string" />
+			<xs:element name="city" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

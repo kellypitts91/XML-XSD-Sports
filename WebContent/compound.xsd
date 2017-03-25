@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+
+<!-- 
+	Author: Kelly Pitts 09098321 
+	XSD Schema - Combined Vocabulary
+	not being used in the compound instance file.
+	using individual xsd files in the compund instance file.
+-->
+
+<!DOCTYPE xml>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:attributeGroup name="sportAttribute" > <!-- named attribute group -->
+		<xs:attribute name="id" type="xs:integer" use="required" />
+		<xs:attribute name="teamName" type="xs:string" use="required" />
+	</xs:attributeGroup>
+	
+	<xs:attributeGroup name="playerAttribute" > <!-- named attribute group -->
+		<xs:attribute name="pid" type="xs:integer" use="required" />
+		<xs:attribute name="sid" type="xs:integer" use="required" />
+	</xs:attributeGroup>
+	
+	<xs:element name="sports">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sport" type="sportType" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="sportType">
+		<xs:sequence> 
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
+			<xs:element name="noOfPlayers" type="xs:integer" minOccurs="1" maxOccurs="1" />
+			
+			<xs:element name="international" minOccurs="1" maxOccurs="1"> 
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<!--<xs:pattern value="international|national"/>-->
+						<xs:enumeration value="international" />
+						<xs:enumeration value="national" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		
+			<xs:element name="type" minOccurs="1" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="indoor|outdoor"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="location" type="locationType" minOccurs="1" maxOccurs="1" /> <!-- parent element -->
+			<xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1" />
+			<xs:element name="playerInfo" type="playerType" /> <!-- parent element -->
+		</xs:sequence>
+		<xs:attributeGroup ref="sportAttribute" />
+	</xs:complexType>
+	
+	<xs:complexType name="locationType"> <!-- named complex type -->
+		<xs:sequence>
+			<xs:element name="country" type="xs:string" />
+			<xs:element name="city" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="playerType"> <!-- named complex type -->
+		<xs:sequence>
+			<xs:element name="player" minOccurs="1" maxOccurs="unbounded" >
+				<xs:complexType>
+					<xs:sequence> 
+						<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
+						<xs:element name="DOB" type="xs:string" minOccurs="1" maxOccurs="1" />
+						<xs:element name="nationality" minOccurs="1" maxOccurs="1" /> 
+						<xs:element name="stats" type="statsType" minOccurs="1" maxOccurs="1" /> <!-- parent element -->
+						<xs:element name="position" type="xs:string" minOccurs="0" maxOccurs="1" />
+					</xs:sequence>
+					<xs:attributeGroup ref="playerAttribute" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="statsType"> <!-- named complex type -->
+		<xs:sequence>
+			<xs:element name="wins" type="xs:integer" />
+			<xs:element name="matches" type="xs:integer" />
+			<xs:element name="debut" type="xs:gYear" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

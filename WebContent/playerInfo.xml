@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!--
+	Author: Kelly Pitts 09098321 
+	Player Info Instance - Second Vocabulary
+-->
+
+<!DOCTYPE xml>
+<playerInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance"
+			xmlns="http://example.com/playerInfo/ns"
+			xsi:schemaLocation="http://example.com/playerInfo/ns playerInfo.xsd">
+	<player pid="1" sid="1">	
+		<name>Brendon McCullum</name>		
+		<DOB>27 September 1981</DOB>
+		<nationality>NZ European</nationality>
+		<stats>				
+			<wins>523</wins>
+			<matches>1141</matches>
+			<debut>2002</debut>
+		</stats>
+		<position>Captain</position>
+	</player>
+	<player pid="1" sid="1">	
+		<name>Tim Southee</name>		
+		<DOB>11 December 1988</DOB>
+		<nationality>NZ European</nationality>
+		<stats>				
+			<wins>201</wins>
+			<matches>386</matches>
+			<debut>2008</debut>
+		</stats>
+		<position>Fast bowler</position>
+	</player>
+</playerInfo>

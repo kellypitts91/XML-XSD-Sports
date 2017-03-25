@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!--
+	Author: Kelly Pitts 09098321 
+	Sport Instance - First Vocabulary
+-->
+
+<!DOCTYPE xml>
+<sports xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance" 
+		xmlns="http://example.com/sports/ns"
+		xsi:schemaLocation="http://example.com/sports/ns sport.xsd">
+		
+	<sport id="1" teamName="BlackCaps">
+		<sportName>Cricket</sportName>
+		<noOfPlayers>11</noOfPlayers>
+		<international>international</international>
+		<type>outdoor</type>
+		<location>
+			<country>New Zealand</country>
+			<city>Auckland</city>
+		</location>
+		<description>
+			The New Zealand cricket team, nicknamed the Black Caps, are the national cricket team 
+			representing New Zealand. They played their first Test in 1930 against England in 
+			Christchurch, New Zealand, becoming the fifth country to play Test cricket. 
+			From 1930 New Zealand had to wait until 1956, more than 26 years, for its first test victory, 
+			against the West Indies at Eden Park in Auckland.[3] They played their first ODI in the 1972–73 
+			season against Pakistan in Christchurch.
+			(BlackCaps, Wikipedia)
+		</description>
+	</sport>
+	<sport id="2" teamName="AllBlacks">
+		<sportName>Rugby</sportName>
+		<noOfPlayers>13</noOfPlayers>
+		<international>international</international>
+		<type>outdoor</type>
+		<location>
+			<country>New Zealand</country>
+			<city>Auckland</city>
+		</location>
+		<description>
+			The New Zealand national rugby union team, commonly called the All Blacks, represent New Zealand 
+			in men's rugby union, which is regarded as the country's national sport.[1] The side has won the 
+			last two Rugby World Cups, in 2011 and 2015, as well as the inaugural tournament in 1987. 
+			They have a 77% winning record in test match rugby, and are the only international side with a 
+			winning record against every opponent. Since their international debut in 1903, they have lost 
+			to only five of the 19 nations they have played in test matches.[a] Since the introduction of 
+			the World Rugby Rankings in 2003, New Zealand has held the number one ranking longer than all 
+			other teams combined.[2] The All Blacks are statistically the best side to have played the game.
+			(The All Blacks, Wikipedia)
+		</description>
+	</sport>
+</sports>
+
+
+
+

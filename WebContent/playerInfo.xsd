@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+
+<!--
+	Author: Kelly Pitts 09098321 
+	Player Info Schema - Second Vocabulary
+-->
+
+<!DOCTYPE xml>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:attributeGroup name="playerAttribute" >
+		<xs:attribute name="pid" type="xs:integer" use="required" />
+		<xs:attribute name="sid" type="xs:integer" use="required" />
+	</xs:attributeGroup>
+	<xs:element name="playerInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="player" minOccurs="1" maxOccurs="unbounded" >
+					<xs:complexType>
+						<xs:sequence> 
+							<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
+							<xs:element name="DOB" type="xs:string" minOccurs="1" maxOccurs="1" />
+							
+							<xs:element name="nationality" minOccurs="1" maxOccurs="1" /> 
+							
+							<xs:element name="stats" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="wins" type="xs:integer" />
+										<xs:element name="matches" type="xs:integer" />
+										<xs:element name="debut" type="xs:gYear" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							
+							<xs:element name="position" type="xs:string" minOccurs="0" maxOccurs="1" />
+						</xs:sequence>
+						<xs:attributeGroup ref="playerAttribute" />
+						
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

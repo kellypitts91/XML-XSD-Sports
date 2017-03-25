@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!--
+	Author: Kelly Pitts 09098321 
+	XML Instance - Combined Vocabulary
+-->
+
+<!DOCTYPE xml>
+<sp:sports xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance"
+		xmlns:sp="http://example.com/sports/ns"
+		xsi:schemaLocation="http://example.com/sports/ns sport.xsd"	>
+	
+	<sp:sport id="1" teamName="BlackCaps">
+		<sp:sportName>Cricket</sp:sportName>
+		<sp:noOfPlayers>11</sp:noOfPlayers>
+		<sp:international>international</sp:international>
+		<sp:type>outdoor</sp:type>
+		<sp:location>
+			<sp:country>New Zealand</sp:country>
+			<sp:city>Auckland</sp:city>
+		</sp:location>
+		<sp:description>
+			The New Zealand cricket team, nicknamed the Black Caps, are the national cricket team 
+			representing New Zealand. They played their first Test in 1930 against England in 
+			Christchurch, New Zealand, becoming the fifth country to play Test cricket. 
+			From 1930 New Zealand had to wait until 1956, more than 26 years, for its first test victory, 
+			against the West Indies at Eden Park in Auckland.[3] They played their first ODI in the 1972–73 
+			season against Pakistan in Christchurch.
+			(BlackCaps, Wikipedia)
+		</sp:description>
+		<pi:playerInfo xmlns:pi="http://example.com/playerInfo/ns"
+					xsi:schemaLocation="http://example.com/playerInfo/ns playerInfo.xsd">
+			<pi:player pid="1" sid="1">	
+				<pi:name>Brendon McCullum</pi:name>		
+				<pi:DOB>27 September 1981</pi:DOB>
+				<pi:nationality>NZ European</pi:nationality>
+				<pi:stats>				
+					<pi:wins>523</pi:wins>
+					<pi:matches>1141</pi:matches>
+					<pi:debut>2002</pi:debut>
+				</pi:stats>
+				<pi:position>Captain</pi:position>
+			</pi:player>
+		</pi:playerInfo>
+	</sp:sport>
+	
+	<sp:sport id="2" teamName="AllBlacks">
+		<sp:sportName>Rugby</sp:sportName>
+		<sp:noOfPlayers>13</sp:noOfPlayers>
+		<sp:international>international</sp:international>
+		<sp:type>outdoor</sp:type>
+		<sp:location>
+			<sp:country>New Zealand</sp:country>
+			<sp:city>Auckland</sp:city>
+		</sp:location>
+		<sp:description>
+			The New Zealand national rugby union team, commonly called the All Blacks, represent New Zealand 
+			in men's rugby union, which is regarded as the country's national sport.[1] The side has won the 
+			last two Rugby World Cups, in 2011 and 2015, as well as the inaugural tournament in 1987. 
+			They have a 77% winning record in test match rugby, and are the only international side with a 
+			winning record against every opponent. Since their international debut in 1903, they have lost 
+			to only five of the 19 nations they have played in test matches.[a] Since the introduction of 
+			the World Rugby Rankings in 2003, New Zealand has held the number one ranking longer than all 
+			other teams combined.[2] The All Blacks are statistically the best side to have played the game.
+			(The All Blacks, Wikipedia)
+		</sp:description>
+		<pi:playerInfo xmlns:pi="http://example.com/playerInfo/ns"
+					xsi:schemaLocation="http://example.com/playerInfo/ns playerInfo.xsd">
+			<pi:player pid="1" sid="2">	
+				<pi:name>Richie McCaw</pi:name>		
+				<pi:DOB>31 December 1980</pi:DOB>
+				<pi:nationality>NZ European</pi:nationality>
+				<pi:stats>				
+					<pi:wins>84</pi:wins>
+					<pi:matches>95</pi:matches>
+					<pi:debut>2000</pi:debut>
+				</pi:stats>
+				<pi:position>Loose Forward</pi:position>
+			</pi:player>
+		</pi:playerInfo>
+	</sp:sport>
+</sp:sports>
